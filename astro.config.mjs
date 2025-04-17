@@ -9,5 +9,6 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
+  site: 'https://olombana.github.io',
   integrations: [react(), tailwind(), sitemap()]
 });
