@@ -92,3 +92,15 @@ button {
 button:hover {
   background-color: #111827;
 }
+
+.social-links a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
