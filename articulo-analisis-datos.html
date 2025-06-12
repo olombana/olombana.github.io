@@ -43,6 +43,13 @@
         <p>Explora plataformas como Kaggle para practicar con datos reales. Intenta resolver problemas, crear dashboards y comunicar tus hallazgos.</p>
 
         <p>Con dedicación y práctica, estarás en camino a convertirte en un analista de datos profesional.</p>
+
+        <!-- Botones de interacción -->
+        <div class="interaction-buttons">
+          <button onclick="incrementar('like')">❤️ Me encanta (<span id="like-count">0</span>)</button>
+          <button onclick="incrementar('dislike')">👎 No me gusta (<span id="dislike-count">0</span>)</button>
+          <button onclick="compartir()">🔗 Compartir</button>
+        </div>
       </article>
     </div>
   </div>
@@ -50,5 +57,34 @@
   <footer>
     &copy; 2025 Blog de Data Analytics
   </footer>
+
+  <script>
+    function compartir() {
+      alert("¡Puedes compartir este artículo copiando la URL en tu navegador!");
+    }
+  </script>
+    <script>
+     // Cargar contadores desde localStorage si existen
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('like-count').textContent = localStorage.getItem('like') || 0;
+        document.getElementById('dislike-count').textContent = localStorage.getItem('dislike') || 0;
+      });
+
+      function incrementar(tipo) {
+        const id = tipo + '-count';
+        let count = parseInt(localStorage.getItem(tipo) || '0', 10);
+        count++;
+        localStorage.setItem(tipo, count);
+        document.getElementById(id).textContent = count;
+      }
+
+      function compartir() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+          alert("¡Enlace copiado al portapapeles!");
+        });
+      }
+    </script>
+
 </body>
 </html>

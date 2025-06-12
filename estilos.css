@@ -104,3 +104,25 @@ button:hover {
   color: #2563eb;
   text-decoration: underline;
 }
+
+.interaction-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.interaction-buttons button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.interaction-buttons button:hover {
+  background-color: #d1d5db;
+}
