@@ -10,14 +10,28 @@
     'pagePath': '/',
     'pageTitle': 'inicio'
   });
-  window.onbeforeunload = function() {
+  /*window.onbeforeunload = function() {
    dataLayer.push({
      'event': 'navegador_cerrado',
      'razon': 'cierre de ventana'
     });
-  };
+  };*/
 </script>
 <!--Final de la capa de datos-->
+
+<!--Session Storage-->
+<script>
+  sessionStorage.setItem('autor', 'Oscar Lombana');
+
+  let objeto = {
+    tipoUsuario: "general",
+    tipoUsuarioId: 1,
+    interes: "data analytics"
+  };
+  let objetoStr = JSON.stringify(objeto);
+  sessionStorage.setItem('olombana', objetoStr)
+</script>
+<!--fin de Session Storage-->
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
